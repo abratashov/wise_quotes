@@ -1,11 +1,14 @@
 WiseQuotes::Application.routes.draw do
-  require "#{Rails.root}/lib/api/api.rb"
-  mount API::API => '/'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  require "#{Rails.root}/lib/api/api.rb"
+  mount API::API => '/'
+
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'application#main'
+
+  match 'quotes(/:id)', to: 'quotes#index', via: :all
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -24,9 +24,12 @@ gem 'jbuilder', '~> 1.2'
 
 # Front-End
 gem 'haml'
-gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'angularjs-rails'
+#gem 'angular-rails-templates'
+gem 'angular-ui-bootstrap-rails'
+gem 'font-awesome-sass-rails'
+gem 'underscore-rails'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
@@ -39,6 +42,10 @@ group :development do
   gem 'shotgun'                                                                           #autoload web-server (when grape-api changes)
   gem 'thin'                                                                              #speed web-server
   gem 'awesome_print'                                                                     #better print
+  gem 'better_errors'                                                                     #console in browser
+  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]                           #need for better_errors
+  gem 'html2haml'                                                                         #convert HTML (even with AngulaJS) to HAML
+  gem 'quiet_assets'                                                                      #hide loading assests in log
 end
 
 # Use ActiveModel has_secure_password

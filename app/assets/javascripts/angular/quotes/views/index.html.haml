@@ -1,0 +1,11 @@
+%div{"ng-controller" => "quotesController"}
+  %form{"ng-submit" => "createQuote()" }
+    %input{"ng-model" => "quote.quote.body", placeholder: 'add new quote here', size: '150', type: 'text', required: true}
+    %input{"ng-model" => "quote.quote.tag_list", placeholder: 'add tags of quote here', size: '70', type: 'text', required: true}
+    %input.btn-primary{:type => "submit", :value => "Save"}
+  %table
+    %tr{"ng-repeat" => "quote in quotes"}
+      %th
+        %span {{quote.body}}
+        %a{"ng-href" => "#/edit/{{quote.id}}"}
+          %i.icon-pencil

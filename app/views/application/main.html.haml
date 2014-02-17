@@ -1,0 +1,25 @@
+!!!
+%html{"ng-app" => "app"}
+  %head
+  %body
+    %div{"ng-controller" => "appController"}
+      %nav.navbar.navbar-default{role: "navigation"}
+        .container-fluid
+          .navbar-header
+            %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", type: "button"}
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.navbar-brand{href: "#"} Brand
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            %ul.nav.navbar-nav
+              %li.active
+                %a{href: "/quotes"} Quotes
+              %li
+                -# %a{"href" => "", "ng-click" => "createQuote()", "ng-controller" => "quoteController"} Create quotes
+                -# %a{"href" => "", "ng-click" => "getQuotes()", "ng-controller" => "quotesController"} Create quotes
+      .col-md-1
+      .col-md-10
+        %div{"ng-view" => ""}
+      .col-md-1
