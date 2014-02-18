@@ -48,6 +48,13 @@ group :development do
   gem 'quiet_assets'                                                                      #hide loading assests in log
 end
 
+group :test do
+  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
