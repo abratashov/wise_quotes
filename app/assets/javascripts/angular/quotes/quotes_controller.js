@@ -16,7 +16,19 @@ angular.module('quotes').controller('quotesController', ['$scope', 'quotesFactor
     };
 
     $scope.getQuotes();
-    //setInterval( function() { $scope.getQuotes(); } , 2000);
+
+    //begin live updating
+    var socky, quotes_channel;
+    try{
+      socky = new Socky.Client('ws://localhost:3001/websocket/app');
+      quotes_channel = socky.subscribe("quotes_channel");
+      quotes_channel.bind("quote_save_event", function(data) {
+        $scope.getQuotes();
+      });
+    } catch(e) {
+      console.log(e.name);
+    }
+    //end live updating
 
     $scope.createQuote = function () {
       quotesFactory.createQuote($scope.quote)

@@ -14,6 +14,7 @@
 //= require jquery_ujs
 // require turbolinks
 //= require underscore
+//= require lib/socky.min
 //= require angular
 //= require angular-route.js
 //= require angular-ui-bootstrap

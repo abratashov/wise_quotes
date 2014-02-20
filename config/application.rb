@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'socky/client'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -35,5 +36,13 @@ module WiseQuotes
       Sprockets::Engines #force autoloading
       Sprockets.register_engine '.haml', HamlTemplate
     end
+
+    def socky
+      @socket = @socket || Socky::Client.new('http://localhost:3001/http/app', 'my_secret')
+    end
   end
 end
+
+ActsAsTaggableOn.remove_unused_tags = true
+
+
