@@ -15,6 +15,10 @@ gem 'grape-swagger-ui'
 gem 'grape_has_scope'
 gem 'grape-active_model_serializers'
 
+#Web-Sockets
+gem 'socky-server'
+gem 'socky-client'
+
 # Data
 gem 'pg'
 gem 'will_paginate'
@@ -43,17 +47,21 @@ group :development do
   gem 'thin'                                                                              #speed web-server
   gem 'awesome_print'                                                                     #better print
   gem 'better_errors'                                                                     #console in browser
-  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]                           #need for better_errors
+  gem 'binding_of_caller', platforms: [:mri_19, :mri_20, :rbx]                            #need for better_errors
   gem 'html2haml'                                                                         #convert HTML (even with AngulaJS) to HAML
   gem 'quiet_assets'                                                                      #hide loading assests in log
 end
 
 group :test do
-  gem 'rspec-rails', '~> 3.0.0.beta'
-  gem 'cucumber-rails', :require => false
-  # database_cleaner is not required, but highly recommended
-  gem 'database_cleaner'
+  gem 'rspec-rails', '~> 3.0.0.beta' # bdd testing
+  gem 'cucumber-rails', require: false # integration testing
+  gem 'capybara-webkit' # engine for JS Web UI testing
+  gem 'database_cleaner' # for autocleaning database before testing
+  gem 'launchy' # for open page in the browser when 'save_and_open_page'
+  gem 'capybara-screenshot'
 end
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

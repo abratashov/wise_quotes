@@ -33,4 +33,21 @@ WiseQuotes::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   address: ENV['USER_ADDRESS'],
+  #   user_name: ENV['USER_ADDRESS'],
+  #   password: ENV['USER_ADDRESS'],
+  #   enable_starttls_auto: true
+  # }
+
+  # config.action_mailer.default_url_options = {
+  #   :host => 'http://localhost:3000',
+  #   :only_path => false
+  # }
+
+  # config.asset_host                        = 'http://localhost:3000'
+  # config.action_mailer.asset_host          = 'http://localhost:3000'
+  # config.action_controller.asset_host      = 'http://localhost:3000'
 end
