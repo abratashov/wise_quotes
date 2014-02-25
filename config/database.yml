@@ -33,11 +33,20 @@ test:
 #   password: root
 
 production:
+  adapter: postgresql
   host: ec2-54-204-16-70.compute-1.amazonaws.com
   port: 5432
   database: d125kd006vuodm
   username: gziwpckyrafjav
   password: vU7q3ksOffkzcDOcULJTG4ulGA
+
+# production:
+#   adapter: postgresql
+#   host: ec2-50-19-219-235.compute-1.amazonaws.com
+#   port: 5432
+#   database: d459scg408t035
+#   username: xwildlezmktemz
+#   password: asTJIIOejMF7urGJM0dbrHBlM6
 
 # cucumber:
 #   <<: *test
