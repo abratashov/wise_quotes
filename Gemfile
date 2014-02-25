@@ -39,6 +39,7 @@ gem 'jquery-rails'
 
 #for production on Heroku
 gem 'unicorn'
+gem 'foreman'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
