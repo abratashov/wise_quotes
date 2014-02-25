@@ -35,11 +35,19 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  host: ec2-54-204-16-70.compute-1.amazonaws.com
+  database: wise_quotes_development
   pool: 5
-  database: d125kd006vuodm
-  username: gziwpckyrafjav
-  password: vU7q3ksOffkzcDOcULJTG4ulGA
+  username: postgres
+  password: root
+
+# production:
+#   adapter: postgresql
+#   encoding: unicode
+#   host: ec2-54-204-16-70.compute-1.amazonaws.com
+#   pool: 5
+#   database: d125kd006vuodm
+#   username: gziwpckyrafjav
+#   password: vU7q3ksOffkzcDOcULJTG4ulGA
 
 # production:
 #   adapter: postgresql
