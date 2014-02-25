@@ -20,7 +20,7 @@ angular.module('quotes').controller('quotesController', ['$scope', 'quotesFactor
     //begin live updating
     var socky, quotes_channel;
     try{
-      socky = new Socky.Client('ws://localhost:3001/websocket/app');
+      socky = new Socky.Client(config.ws_server);
       quotes_channel = socky.subscribe("quotes_channel");
       quotes_channel.bind("quote_save_event", function(data) {
         $scope.getQuotes();

@@ -2,7 +2,7 @@
 
 angular.module('quotes').factory('quotesFactory',
   ['$http', function($http) {
-    var urlBase = '/api/v1/quotes';
+    var urlBase = config.server_ip + '/api/v1/quotes';
     var quotesFactory = {};
 
     quotesFactory.getQuotes = function () {
