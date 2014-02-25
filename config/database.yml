@@ -24,14 +24,20 @@ test:
   password: root
   socket: /var/run/mysqld/mysqld.sock
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: wise_quotes_development
-  pool: 5
-  username: postgres
-  password: root
+# production:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: wise_quotes_development
+#   pool: 5
+#   username: postgres
+#   password: root
 
+production:
+  host: ec2-54-204-16-70.compute-1.amazonaws.com
+  port: 5432
+  database: d125kd006vuodm
+  username: gziwpckyrafjav
+  password: vU7q3ksOffkzcDOcULJTG4ulGA
 
 # cucumber:
 #   <<: *test
