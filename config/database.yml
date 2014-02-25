@@ -26,12 +26,11 @@ test:
 
 production:
   adapter: postgresql
-  encoding: utf8
+  encoding: unicode
   database: wise_quotes_development
   pool: 5
   username: postgres
   password: root
-  socket: /var/run/mysqld/mysqld.sock
 
 # cucumber:
 #   <<: *test
