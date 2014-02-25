@@ -1,0 +1,20 @@
+<div ng-controller="quotesController">
+  <form ng-submit="createQuote()">
+    <div>
+      <label for='body'> Text</label>
+      <input id="body" ng-model= "quote.quote.body" placeholder='add new quote here' size='150' type='text' required/>
+    </div>
+    <div>
+      <label for='tags'>Tags</label>
+      <input id="tags" ng-model="quote.quote.tag_list" placeholder='add tags of quote here' size='70' type='text' required/>
+      <input class="btn-primary" type="submit" value="Save"/>
+    </div>
+  </form>
+  <table>
+    <tr ng-repeat="quote in quotes">
+      <th>
+        <span>{{quote.body}}</span>
+        <a ng-href="#/edit/{{quote.id}}"><i class="icon-pencil"></i></a>
+      </th></tr>
+  </table>
+</div>
