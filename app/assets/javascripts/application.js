@@ -22,8 +22,8 @@
 // require_tree ./templates
 
 var config = {
-  server_ip: 'http://tranquil-spire-8195.herokuapp.com',
-  ws_server: 'ws://tranquil-spire-8195.herokuapp.com:3001/websocket/app'
+  server_ip: 'http://enigmatic-reaches-2389.herokuapp.com',
+  ws_server: 'ws://enigmatic-reaches-2389.herokuapp.com:3001/websocket/app'
   // server_ip: 'http://localhost:3000',
   // ws_server: 'ws://localhost:3001/websocket/app'
 };
